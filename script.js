@@ -76,8 +76,10 @@ const getCoordinates = async (cityName, stateCode) => {
       lat: location.lat,
       lon: location.lng
     };
+  } else {
+    alert("Sorry that city wasn't found. Cities must be located within the US. If your city is still not found please check your spelling.");
+    return null;
   }
-  return null;
 };
 
 // Fetch weather forecast data from OpenWeatherMap API
@@ -156,6 +158,17 @@ $('#search-form').on('submit', (event) => {
   // Get city and state from the form
   const cityName = $('#city').val();
   const stateCode = $('#state').val();
+
+  // Validate input
+  if (!cityName.trim()) {
+    alert('Please enter a city.');
+    return;
+  }
+
+  if (stateCode === 'Choose state...') {
+    alert('Please select a state.');
+    return;
+  }
 
   // Search for the weather data
   searchCity(cityName, stateCode);
