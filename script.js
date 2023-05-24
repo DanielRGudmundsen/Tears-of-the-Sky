@@ -67,14 +67,8 @@ const getDateString = (timestamp) => {
   return `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
 }
 
-// Fetch city coordinates from OpenWeatherMap Geocoding API
-const getCoordinates = async (cityName) => {
-  const data = await $.getJSON(`https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${API_KEY}`);
-  return data[0];
-};
-
-// Fetch city coordinates from Google Geocoding API as a fallback
-const getCoordinatesFromGoogle = async (cityName, stateCode) => {
+// Fetch city coordinates from Google Geocoding API
+const getCoordinates = async (cityName, stateCode) => {
   const data = await $.getJSON(`https://maps.googleapis.com/maps/api/geocode/json?address=${cityName},${stateCode}&key=${GOOGLE_API_KEY}`);
   if (data.results && data.results.length > 0) {
     const location = data.results[0].geometry.location;
@@ -93,14 +87,8 @@ const getWeatherData = async (lat, lon) => {
 
 // Search weather data for a given city
 const searchCity = async (cityName, stateCode) => {
-  let coordinates;
-  try {
-    // Attempt to get coordinates from OpenWeatherMap
-    coordinates = await getCoordinates(cityName);
-  } catch (error) {
-    // If it fails, use Google Geocoding as a fallback
-    coordinates = await getCoordinatesFromGoogle(cityName, stateCode);
-  }
+  // Get coordinates from Google Geocoding
+  const coordinates = await getCoordinates(cityName, stateCode);
 
   // Get the weather data using the coordinates
   const weatherData = await getWeatherData(coordinates.lat, coordinates.lon);
