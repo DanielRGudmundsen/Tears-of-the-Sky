@@ -1,31 +1,40 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
+  <!-- Basic Meta Tags -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Page Title -->
   <title>Tears of the Sky</title>
+
+  <!-- Link to External CSS -->
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Add Bootstrap CSS -->
+  <!-- Link to Bootstrap CSS for easy styling -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-  <!-- Navbar -->
+  <!-- Top Navigation Bar -->
   <nav class="navbar navbar-dark bg-dark">
     <span class="navbar-brand mb-0 h1">Tears of the Sky</span>
   </nav>
 
-  <!-- Main container for dynamic content -->
+  <!-- Main container for holding the content -->
   <div class="container mt-4">
-    <!-- Search form -->
+    <!-- Search form for searching by city and state -->
     <form id="search-form" class="form-inline">
+      <!-- Field for entering the city -->
       <div class="form-group mb-2">
         <label for="city-input" class="sr-only">City:</label>
         <input type="text" class="form-control" id="city-input" placeholder="Enter city name">
       </div>
+
+      <!-- Dropdown for selecting the state -->
       <div class="form-group mx-sm-3 mb-2">
         <label for="state-select" class="sr-only">State:</label>
         <select id="state-select" class="form-control">
+          <!-- Options for each state -->
           <option selected>Choose state...</option>
           <option value="AL">Alabama</option>
           <option value="AK">Alaska</option>
@@ -88,19 +97,32 @@
           <option value="WY">Wyoming</option>
         </select>
       </div>
+
+      <!-- Submit button to trigger the search -->
       <button type="submit" class="btn btn-primary mb-2">Get Weather</button>
     </form>
 
-    <!-- Container for current weather -->
+    <!-- Container for displaying the current weather -->
     <div id="current-weather" class="mt-4"></div>
 
-    <!-- Container for 5-day forecast -->
+    <!-- Container for displaying the 5-day forecast -->
     <div id="forecast" class="mt-4"></div>
+
+    <!-- Container for displaying the search history -->
+    <div id="search-history" class="mt-4">
+      <h3>Search History</h3>
+    </div>
+
   </div>
 
-  <!-- Add Bootstrap JS and its dependencies -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <!-- jQuery library for JavaScript functionality -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+  <!-- Bootstrap JS and its dependencies for interactive features -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Link to the main JavaScript file -->
   <script src="script.js"></script>
 </body>
 </html>
+
