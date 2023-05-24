@@ -68,6 +68,7 @@ searchForm.addEventListener('submit', async (event) => {
     // If both attempts fail, log an error and return
     if (!coordinates) {
       console.error('No coordinates found for city:', cityName);
+      alert("Sorry, your city was not found. Please check your spelling and try again.");
       return;
     }
 
