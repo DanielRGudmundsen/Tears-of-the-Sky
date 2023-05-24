@@ -69,7 +69,7 @@ const getDateString = (timestamp) => {
 
 // Fetch city coordinates from Google Geocoding API
 const getCoordinates = async (cityName, stateCode) => {
-  const data = await $.getJSON(`https://maps.googleapis.com/maps/api/geocode/json?address=${cityName},${stateCode}&key=${GOOGLE_API_KEY}`);
+  const data = await $.getJSON(`https://maps.googleapis.com/maps/api/geocode/json?address=${cityName},${stateCode}&components=country:US&key=${GOOGLE_API_KEY}`);
   if (data.results && data.results.length > 0) {
     const location = data.results[0].geometry.location;
     return {
