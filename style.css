@@ -1,0 +1,115 @@
+@font-face {
+    font-family: 'Triforce';
+    src: url('Triforce.eot');
+    src: url('Triforce.eot?#iefix') format('embedded-opentype'),
+        url('Triforce.woff2') format('woff2'),
+        url('Triforce.woff') format('woff'),
+        url('Triforce.ttf') format('truetype'),
+        url('Triforce.svg#Triforce') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BotW Sheikah';
+    src: url('BotWSheikahRegular.eot');
+    src: url('BotWSheikahRegular.eot?#iefix') format('embedded-opentype'),
+        url('BotWSheikahRegular.woff2') format('woff2'),
+        url('BotWSheikahRegular.woff') format('woff'),
+        url('BotWSheikahRegular.ttf') format('truetype'),
+        url('BotWSheikahRegular.svg#BotWSheikahRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: 'Triforce', sans-serif;
+    background-color: #3C6E71; 
+    color: #F4F1BB; /* A light, almost yellow color for contrast and readability */
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+  
+.navbar {
+    background-color: #264653; /* A darker color for the nav bar for contrast */
+}
+  
+.navbar-brand {
+    font-size: 2rem;
+    color: #F4F1BB;
+}
+  
+.form-control {
+    background-color: #3C6E71; /* Use the same color as body background */
+    color: #F4F1BB; /* Use the same color as body text */
+    border: 2px solid #F4F1BB; /* An earthy, golden color for borders */
+}
+  
+.day-item {
+    background: #264653; 
+    border: 1px solid #F4F1BB;
+    padding: 10px;
+}
+
+#city-input {
+    background-color: #ffffff; /* Use the same color as body background */
+    color: #2b2922; /* Use the same color as body text */
+    border: 2px solid #E9C46A; /* An earthy, golden color for borders */
+}
+
+.centered-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.cWeather {
+    font-size: 3rem;
+}
+
+.cWeather-data {
+    font-size: 2rem;
+}
+
+.separator {
+    width: 100%;
+    border: 0;
+    border-top: .2rem solid #F4F1BB;
+    border-radius: .1rem;
+    margin: 20px auto; /* This will provide space above and below the line */
+}  
+
+.heading {
+    font-size: 2.5rem;
+}
+
+.searchHbtn {
+    background-color: #92FEFB; 
+    color: #000000;
+    margin-bottom: 1rem;
+}
+
+#clear-history-button {
+    background-color: #E76F51; /* A bold, warm color for buttons */
+    color: #F4F1BB;
+}
+
+.container-bottom {
+    margin-bottom: 3rem;
+}
+
+footer {
+    font-family: 'BotW Sheikah', sans-serif;
+    color: #92FEFB;
+    background-color: #264653;
+    width: 100%;
+    margin-top: auto;
+    padding: 0;
+    font-size: larger;
+}
+
