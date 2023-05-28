@@ -33,3 +33,7 @@ If the OpenWeatherMap API or the Google Geocoding API are not available or retur
 - Expand the application to support locations outside the United States.
 - Enhance the error handling to display user-friendly error messages on the webpage.
 - Allow users to customize their experience (e.g., choose between Fahrenheit and Celsius, choose between a 5-day and 7-day forecast, etc.).
+
+## Link to deployed application
+
+[The Weather Sensor](https://danielrgudmundsen.github.io/Tears-of-the-Sky/)
